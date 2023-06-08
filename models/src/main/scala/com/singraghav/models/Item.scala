@@ -1,7 +1,27 @@
 package com.singraghav.models
 
-import com.singraghav.models.Types.{Brand, Category, Description, Model}
+import com.singraghav.models.Types.{BrandId, CategoryId, ItemDescription, ItemId, ItemName, Model}
+import squants.market.Money
 
-import java.util.UUID
+case class Item(
+                uuid: ItemId,
+                name: ItemName,
+                description: ItemDescription,
+                price: Money,
+                brand: Brand,
+                category: Category
+  )
 
-case class Item(uuid: UUID, model: Model, brand: Brand, category: Category, description: Description, price: BigDecimal)
+case class CreateItem(
+                 name: ItemName,
+                 description: ItemDescription,
+                 price: Money,
+                 brand: BrandId,
+                 category: CategoryId
+               )
+
+
+case class UpdateItem(
+                       uuid: ItemId,
+                       price: Money
+                     )
