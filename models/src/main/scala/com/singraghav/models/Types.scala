@@ -39,4 +39,16 @@ object Types {
     implicit def toString(key: RedisKey): String = key.value
   }
 
+  @newtype case class UserId(value: UUID)
+
+  @newtype case class Quantity(value: Int)
+
+  @newtype case class CartId(value: UUID)
+
+  @newtype case class OrderId(uuid: UUID)
+
+  @newtype case class PaymentId(uuid: UUID)
+
+  @newtype case class JwtToken(value: String)
+
 }
