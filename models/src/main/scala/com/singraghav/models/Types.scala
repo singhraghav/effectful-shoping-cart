@@ -16,7 +16,7 @@ object Types {
 
   @newtype case class BrandId(value: UUID)
 
-  @newtype case class BrandName(value: NonEmptyString)
+  @newtype case class BrandName(value: String)
 
   @newtype case class CategoryId(value: UUID)
 
